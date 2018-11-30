@@ -1,0 +1,68 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    compileSdkVersion 28
+    buildToolsVersion '28.0.3'
+    defaultConfig {
+
+        applicationId "com.mjhram.radioalarm"
+        minSdkVersion 21
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestImplementation('androidx.test.espresso:espresso-core:3.1.0', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    implementation 'com.android.support:support-v4:28.0.0'
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support:recyclerview-v7:28.0.0'
+    implementation 'com.android.support:design:28.0.0'
+
+    //implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    //implementation 'androidx.appcompat:appcompat:1.0.2'
+    //implementation 'androidx.recyclerview:recyclerview:1.0.0'
+    //implementation 'com.google.android.material:material:1.1.0-alpha01'
+
+
+    implementation group: 'joda-time', name: 'joda-time', version: '2.9.6'
+    testImplementation'junit:junit:4.12'
+//    implementation "androidx.appcompat:appcompat:$appcompatVersion"
+//    implementation "androidx.palette:palette:$paletteVersion"
+//    implementation "androidx.constraintlayout:constraintlayout:$constraintlayoutVersion"
+//    implementation "androidx.media:media:$mediaVersion"
+//    implementation "androidx.lifecycle:lifecycle-runtime:$livecycleVersion"
+//    implementation "androidx.lifecycle:lifecycle-extensions:$livecycleVersion"
+//
+//    implementation "com.google.android.material:material:$materialVersion"
+//
+//    implementation "com.google.android.exoplayer:exoplayer-core:$exoPlayerVersion"
+//    implementation "com.google.android.exoplayer:exoplayer-hls:$exoPlayerVersion"
+
+    implementation "com.android.support:palette-v7:28.0.0"
+    implementation "com.android.support.constraint:constraint-layout:1.1.3"
+    implementation "com.android.support:support-media-compat:28.0.0"
+    implementation "android.arch.lifecycle:runtime:1.1.0"
+    implementation "android.arch.lifecycle:extensions:1.1.0"
+
+
+    implementation "com.google.android.exoplayer:exoplayer-core:$exoPlayerVersion"
+    implementation "com.google.android.exoplayer:exoplayer-hls:$exoPlayerVersion"
+}
