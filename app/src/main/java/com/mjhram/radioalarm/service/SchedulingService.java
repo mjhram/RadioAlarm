@@ -44,7 +44,7 @@ public class SchedulingService extends IntentService {
         final Bundle bundle = new Bundle();
         bundle.putAll(intent.getExtras());
         bundle.putBoolean("fromNotification", true);
-        bundle.putBoolean("alarm", true);
+        //bundle.putBoolean("alarm", true);
 
         sendIntent.putExtras(bundle);
 

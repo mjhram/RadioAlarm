@@ -187,7 +187,7 @@ public class AlarmFragment extends Fragment implements View.OnClickListener {
                     checkedToUnchecked.stop();
                     checkBox.setButtonDrawable(uncheckedToChecked);
                     uncheckedToChecked.start();
-                    alarm.reset();
+                    //alarm.reset();
                     alarm.schedule(getContext());
 //                    Toast.makeText(getActivity(), alarm.getTimeUntilNextAlarmMessage(), Toast.LENGTH_LONG).show();
                 } else {

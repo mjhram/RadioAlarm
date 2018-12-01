@@ -68,6 +68,7 @@ public class Alarm implements Parcelable {
         this.context = context;
         active = true;
 
+        reset(); //check if alarm is older than now and reset it.
         AlarmManager alarmManager = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
 
         //alarmManager.setAlarmClock(new AlarmManager.AlarmClockInfo(dateTime.getMillis(), pendingIntent), pendingIntent);

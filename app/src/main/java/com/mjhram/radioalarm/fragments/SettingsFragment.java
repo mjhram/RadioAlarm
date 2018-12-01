@@ -60,10 +60,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.util.ArrayList;
-import java.util.Locale;
-import java.util.concurrent.TimeUnit;
-
 import com.mjhram.radioalarm.MainActivity;
 import com.mjhram.radioalarm.PlayerService;
 import com.mjhram.radioalarm.R;
@@ -81,6 +77,10 @@ import com.mjhram.radioalarm.helpers.StationFetcher;
 import com.mjhram.radioalarm.helpers.StationListHelper;
 import com.mjhram.radioalarm.helpers.StorageHelper;
 import com.mjhram.radioalarm.helpers.TransistorKeys;
+
+import java.util.ArrayList;
+import java.util.Locale;
+import java.util.concurrent.TimeUnit;
 
 
 /**
@@ -275,7 +275,7 @@ public final class SettingsFragment extends Fragment implements TransistorKeys {
             showSleepTimerNotification(-1);
         }
 
-        Bundle extras = intent.getExtras();
+        /*Bundle extras = intent.getExtras();
         if(extras != null) {
             Boolean message = extras.getBoolean("alarm");
             if(message != null) {
@@ -286,7 +286,7 @@ public final class SettingsFragment extends Fragment implements TransistorKeys {
                     startPlayback(newStationList.get(0));
                 }
             }
-        }
+        }*/
     }
 
 

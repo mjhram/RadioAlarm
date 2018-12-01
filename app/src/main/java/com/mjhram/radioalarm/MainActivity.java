@@ -120,7 +120,7 @@ public class MainActivity extends AppCompatActivity implements TransistorKeys {
         // check state of External Storage
         checkExternalStorageState();
 
-        Intent intent = getIntent();
+        /*Intent intent = getIntent();
         Bundle extras = intent.getExtras();
         if(extras != null) {
             Boolean message = extras.getBoolean("alarm");
@@ -128,7 +128,7 @@ public class MainActivity extends AppCompatActivity implements TransistorKeys {
                 //it is alarm
                 tabLayout.getTabAt(1).select();
             }
-        }
+        }*/
 
     }
 
